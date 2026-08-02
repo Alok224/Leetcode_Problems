@@ -8,9 +8,7 @@ class Solution {
             }
         }
         int size = map.size();
-        // for (Map.Entry<String, Integer> entry : items.entrySet()) {
-        //     System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        // }
+        
         int[] nums = new int[size+2];
         for(Map.Entry<Integer,Integer> entry : map.entrySet()){
             if(entry.getValue() == 1){
