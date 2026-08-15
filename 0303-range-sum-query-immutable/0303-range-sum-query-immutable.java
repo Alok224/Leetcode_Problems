@@ -3,14 +3,6 @@ class NumArray {
     public int[] prefixsum;
 
     public NumArray(int[] nums) {
-        // prefixsum = new int[nums.length + 1];
-        // int sum = 0;
-        
-        // prefixsum[0] = 0;
-        // for(int i = 0; i<nums.length; i++){
-        //     sum = sum + nums[i];
-        //     prefixsum[i+1] = sum;
-        // }
         prefixsum = new int[nums.length];
         int sum = 0; int n = nums.length;
         for(int i = 0; i<n; i++){
@@ -20,9 +12,6 @@ class NumArray {
     }
     
     public int sumRange(int left, int right) {
-        // int answer;
-        // answer = prefixsum[right + 1] - prefixsum[left];
-        // return answer;
         int sum = 0;
         if(left == 0){
             sum = prefixsum[right] - 0;
