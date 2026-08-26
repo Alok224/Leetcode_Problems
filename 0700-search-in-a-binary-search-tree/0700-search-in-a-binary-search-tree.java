@@ -27,16 +27,35 @@ class Solution {
         // }
         // return root;
 
-        if(root == null){
-            return root;
+        // if(root == null){
+        //     return root;
+        // }
+        // if(root.val == val){
+        //     return root;
+        // }
+        // if(root.val < val){
+        //     // move left
+        //     return searchBST(root.right,val);
+        // }
+        // return searchBST(root.left,val);
+
+        
+        while(root != null){
+            if(root == null){
+                return null;
+            }
+
+            if(root.val == val){
+                return root;
+            }
+
+            if(root.val > val){
+                root = root.left;
+            }
+            else if(root.val < val){
+                root = root.right;
+            } 
         }
-        if(root.val == val){
-            return root;
-        }
-        if(root.val < val){
-            // move left
-            return searchBST(root.right,val);
-        }
-        return searchBST(root.left,val);
+        return root;
     }
 }
